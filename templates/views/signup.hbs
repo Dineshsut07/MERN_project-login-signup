@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+  {{>navbar}}
+   <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-500 to-purple-700">
+  <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Sign Up</h2>
+    <form action="/signup" method="post">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-600 text-sm font-medium">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-purple-400"
+          placeholder="John Doe"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-600 text-sm font-medium">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-purple-400"
+          placeholder="you@example.com"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-gray-600 text-sm font-medium">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-purple-400"
+          placeholder="********"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-gray-600 text-sm font-medium">Confirm Password</label>
+        <input
+          type="password"
+          id="cpassword"
+          name="cpassword"
+          class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-purple-400"
+          placeholder="********"
+        />
+      </div>
+      <div>
+        <button
+          type="submit"
+          class="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline-purple active:bg-purple-700"
+        >
+          Sign Up
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{{>footer}}
+
+</body>
+</html>
